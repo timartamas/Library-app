@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27-march</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <dialog id="favDialog">
+        
+            <div id="dialogContainer">
+                <div>
+                    <h2>*Adding a new book*</h2>
+                </div>
+                <div>
+                    <label for="authorname">Author's name</label>
+                    <br>
+                    <input type="text" id="authorname" value="" required>
+                </div>
+                
+                <div>
+                    <label for="bookname">Book's name</label>
+                    <br>
+                    <input type="text" id="bookname" value="" required>
+                </div>
+                
+                <div>
+                    <label id="booklength" for="pages">How long is the book?</label>
+                    <input type="number" id="pages" value="" required>
+                </div>
+                
+                <div>
+                    <label for="radio">Did you read the book?</label>
+                    <br><br>
+                
+                        <div id="radioButtons">
+                            <div><input type="radio" name="yesno" id="radio" value="yes" checked/>Yes</div>
+                            <br>
+                            <div><input type="radio" name="yesno" value="no"/>No</div>
+                        </div>
+                
+                </div>
+                <div id="buttons">
+                    <button id="saveBtn">Save</button>
+                    <button id="cancelBtn"value="cancel" formmethod="dialog">Close</button>
+                </div>
+                
+                          </div>
+            </div>
+        
+      </dialog>
+      
+      <button id="showDialog">Add a new book</button>
+      
+      <div id="right">
+            
+      </div>
+
+</body>
+</html>

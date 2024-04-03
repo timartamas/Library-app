@@ -1,0 +1,93 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+
+#left{
+    
+    padding:10px;
+
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+body{
+    height:100vh;
+    width:100vw;
+    display:grid;
+    grid-template-columns: 15% 85%;
+    background-color: rgb(255, 251, 232);
+}
+
+#right{
+    display:grid;
+}
+
+::backdrop{
+    background-color: rgb(255, 251, 232);
+}
+
+#favDialog{
+    background-color: rgb(255, 246, 247);
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    width:260px;
+    height:360px;
+    padding:30px;
+}
+
+#buttons{
+    display:flex;
+    flex-direction:row;
+    gap:20px;
+    
+}
+
+
+
+#saveBtn, #cancelBtn{
+    font-size:25px;
+    padding:5px;
+    cursor:pointer;
+    border:2px solid black;
+}
+
+#showDialog{
+    cursor:pointer;
+}
+
+#dialogContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap:20px;
+}
+
+#radioButtons{
+    display:flex;
+    gap:10px;
+    justify-content: center;
+    
+} 
+
+#radioButtons>div{
+    display:flex;
+    gap:3px;
+}
+
+h2{
+    
+    text-align:center;
+}
+
+
+#booklength{
+    display: flex;
+    justify-content: start;
+}
