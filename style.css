@@ -17,13 +17,13 @@
 body{
     height:100vh;
     width:100vw;
-    display:grid;
+    /* display:grid; */
     grid-template-columns: 15% 85%;
     background-color: rgb(255, 251, 232);
 }
 
 #right{
-    display:grid;
+    
 }
 
 ::backdrop{

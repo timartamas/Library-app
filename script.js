@@ -101,9 +101,21 @@ saveBtn.addEventListener('click', ()=>{
         book.innerHTML = myArray[myArray.length-1]
         right.appendChild(book)
         const removeButton = document.createElement("button")
-        removeButton.
+        let x = "button-"+i
+        removeButton.setAttribute('id', x)
+        removeButton.classList.add("removeButtons")
+        removeButton.textContent = "Delete"
+        right.appendChild(removeButton)
+
+        
+
+
+
         favDialog.close("CLOSED")
     }
 }
 })
 
+rmvBtns = document.querySelectorAll(".removeButtons")
+
+// RMVBTNS eventhandler ???
