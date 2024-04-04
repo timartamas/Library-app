@@ -40,7 +40,12 @@ cancelBtn.addEventListener('click', ()=>{
     favDialog.close("CLOSED")
 })
 
-const myArray2 = []
+
+    const books = document.getElementsByClassName("book-containers")
+    const arrRmBtns = document.getElementsByClassName("arrRmBtns")
+
+
+
 
 saveBtn.addEventListener('click', ()=>{
     
@@ -118,22 +123,28 @@ saveBtn.addEventListener('click', ()=>{
         
 
         
-
-
+        const books = document.getElementsByClassName("book-containers")
+        const arrRmBtns = document.getElementsByClassName("arrRmBtns")
+        myFunction2()
 
         favDialog.close("CLOSED")
     }
 }
 })
-const books = document.getElementsByClassName("book-containers")
-const arrRmBtns = document.getElementsByClassName("arrRmBtns")
+
 
 function myFunction(){
     for(i=0; i<arrRmBtns.length; i++){
         let local = "div-"+i
         const element = document.getElementById(local)
         element.remove()
+        console.log("local="+local)
+        console.log("arrRmBtns[i]="+arrRmBtns[i])
     }
 }
 
-arrRmBtns.forEach(x => x.addEventListener("click", myFunction))
+function myFunction2(){
+    for(i=0; i<arrRmBtns.length; i++){
+        arrRmBtns[i].addEventListener("click", myFunction)
+    }
+}
