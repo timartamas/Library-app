@@ -21,6 +21,7 @@ let library = []
 const myArray = []
 
 
+
 const showButton = document.getElementById("showDialog");
 const favDialog = document.getElementById("favDialog");
 const cancelBtn = document.getElementById("cancelBtn")
@@ -39,7 +40,7 @@ cancelBtn.addEventListener('click', ()=>{
     favDialog.close("CLOSED")
 })
 
-
+const myArray2 = []
 
 saveBtn.addEventListener('click', ()=>{
     
@@ -88,24 +89,33 @@ saveBtn.addEventListener('click', ()=>{
     const book = document.createElement('div')
     for(i=0; i<library.length; i++){
         
+        const removeButton = document.createElement("button")
+        let x = "button-"+i
+        let y = "div-"+i
+        removeButton.setAttribute('id', x)
+        removeButton.classList.add("removeButtons")
+        removeButton.textContent = "Delete"
+
+        
+
+
 
         const string="Book #"+(i+1)+
         "<br>Author's name: "+library[i].aName+
         "<br>Book's name: "+library[i].bName+
         "<br>Number of pages: "+library[i].nPages+
         "<br>Did you read the book: "+library[i].read+
-        "<br><br>"
+        "<br><br>"+
+        "<button class='arrRmBtns' id=remove-"+i+">Remove</button>"
 
         
         myArray.push(string)
         book.innerHTML = myArray[myArray.length-1]
+        book.classList.add("book-containers")
+        book.setAttribute('id', y)
         right.appendChild(book)
-        const removeButton = document.createElement("button")
-        let x = "button-"+i
-        removeButton.setAttribute('id', x)
-        removeButton.classList.add("removeButtons")
-        removeButton.textContent = "Delete"
-        right.appendChild(removeButton)
+
+        
 
         
 
@@ -115,7 +125,15 @@ saveBtn.addEventListener('click', ()=>{
     }
 }
 })
+const books = document.getElementsByClassName("book-containers")
+const arrRmBtns = document.getElementsByClassName("arrRmBtns")
 
-rmvBtns = document.querySelectorAll(".removeButtons")
+function myFunction(){
+    for(i=0; i<arrRmBtns.length; i++){
+        let local = "div-"+i
+        const element = document.getElementById(local)
+        element.remove()
+    }
+}
 
-// RMVBTNS eventhandler ???
+arrRmBtns.forEach(x => x.addEventListener("click", myFunction))
